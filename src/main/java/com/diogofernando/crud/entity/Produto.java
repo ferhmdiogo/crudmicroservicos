@@ -11,6 +11,8 @@ import javax.persistence.Table;
 
 import org.modelmapper.ModelMapper;
 
+import com.diogofernando.crud.data.vo.ProdutoVO;
+
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -38,10 +40,10 @@ public class Produto implements Serializable {
 	@Column(name = "nome", nullable = false, length = 255)
 	private String nome;
 	
-	@Column(name = "nome", nullable = false, length = 10)
+	@Column(name = "estoque", nullable = false, length = 10)
 	private Integer estoque;
 	
-	@Column(name = "nome", nullable = false, length = 10)
+	@Column(name = "preco", nullable = false, length = 10)
 	private Double preco;
 	
 	public static Produto create(ProdutoVO produtoVO) {
